@@ -43,7 +43,6 @@ def play_round(real_fishes, made_up_fishes):
 
 if __name__ == '__main__':
 
-    random.seed(0)
     parser = argparse.ArgumentParser()
     parser.add_argument('--fishes_csv', default="fischarten.csv")
     args = parser.parse_args()

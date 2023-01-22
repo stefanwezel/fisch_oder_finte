@@ -1,0 +1,296 @@
+,name
+0,Neunaugen
+1,Störartige
+2,Aalartige
+3,Heringsartige
+4,Lachsartige
+5,Stintartige
+6,Hechtartige
+7,Karpfenfische
+8,Saugkarpfen
+9,Bachschmerlen
+10,Steinbeißer
+11,Welsartige
+12,Dorschartige
+13,Grundelartige
+14,Seenadelartige
+15,Zahnkärpflinge
+16,Reisfische
+17,Ährenfischartige
+18,Meeräschenartige
+19,Buntbarsche
+20,Schleimfische
+21,Plattfische
+22,Wolfsbarsche
+23,Echte Barsche
+24,Sonnenbarsche
+25,Groppenverwandte
+26,Stichlinge
+27,Kaspineunauge
+28,Donauneunauge
+29,Griechisches Bachneunauge
+30,Ukrainisches Bachneunauge
+31,Drin-Bachneunauge
+32,Donaubachneunauge
+33,Flussneunauge
+34,Bachneunauge
+35,Arktisches Neunauge
+36,Oberitalienisches Neunauge
+37,Meerneunauge
+38,Sibirischer Stör
+39,Russischer Stör oder Waxdick
+40,Adriatischer Stör
+41,Glatt-Stör oder Glattdick
+42,Atlantischer Stör
+43,Persischer Stör
+44,Sterlet
+45,Sternhausen
+46,Europäischer Stör
+47,Europäischer Hausen
+48,Löffelstör
+49,Europäischer Aal
+50,Maifisch
+51,Kaspi-Maifisch
+52,Kizilagach-Maifisch
+53,Finte
+54,Schwarzmeer-Maifisch
+55,Kaspischer Schwarzrücken
+56,Kerchen-Maifisch
+57,Suworow-Maifisch
+58,Wolga-Maifisch
+59,Abrau-Sardine
+60,Tyulka-Sardine
+61,Kleine Maräne
+62,Atlantische Wandermaräne
+63,Ammersee-Kilch
+64,Pfärrig
+65,Riedling
+66,Albock
+67,Stechlin-Maräne
+68,Lavaret
+69,Gangfisch
+70,Ostseeschnäpel
+71,Große Bodenrenke
+72,Schnäpel
+73,Peledmaräne
+74,Kleine Bodenrenke
+75,Bodenseefelchen
+76,Albeli
+77,Weißlachs
+78,Donau-Huchen
+79,Buckellachs
+80,Ketalachs
+81,Silberlachs
+82,Regenbogenforelle
+83,Marmorataforelle
+84,Atlantischer Lachs
+85,Forelle
+86,Adria-Forelle
+87,Seesaibling
+88,Bachsaibling
+89,Amerikanischer Seesaibling
+90,Europäische Äsche
+91,Europäischer Stint
+92,Europäischer Hecht
+93,Italienischer Hecht
+94,Ungarischer Hundsfisch
+95,Amerikanischer Hundsfisch
+96,Europäischer Hundsfisch
+97,Brachse
+98,Zobel
+99,Portugiesische Plötze
+100,Schneider
+101,Ohrid-Schneider
+102,Prespa-Schneider
+103,Weißer Ukelei
+104,Ukelei
+105,Kaukasischer Ukelei
+106,Spanische Elritze
+107,Barbengründling
+108,Zope
+109,Albanische Barbe
+110,Barbe
+111,Türkische Barbe
+112,Forellenbarbe
+113,Tiberbarbe
+114,Krimbarbe
+115,Italienische Barbe
+116,Güster
+117,Giebel
+118,Goldfisch
+119,Karausche
+120,Kaukasischer Näsling
+121,Dalmatischer Näsling
+122,Pardilla-Plötze
+123,Nase
+124,Terek-Näsling
+125,Elritzennäsling
+126,Italienischer Näsling
+127,Graskarpfen
+128,Karpfen
+129,Weißflossen-Gründling
+130,Gründling
+131,Soldators Gründling
+132,Silberkarpfen
+133,Marmorkarpfen
+134,Pardilla-Plötze
+135,Moderlieschen
+136,Rapfen
+137,Danilewski-Hasel
+138,Aland
+139,Jugoslawischer Döbel
+140,Hasel
+141,Makal-Strömer
+142,Kroatischer Strömer
+143,Adriatischer Hasel
+144,Tursky-Strömer
+145,Aral-Barbe
+146,Bulatamai-Barbe
+147,Iberische Barbe
+148,Griechische Barbe
+149,Ebro-Barbe
+150,Andalusische Barbe
+151,Makedonische Plötze
+152,Albanische Plötze
+153,Südwesteuropäischer Näsling
+154,Griechische Elritze
+155,Ziege
+156,Bobyrez-Döbel
+157,Dalmatische Elritze
+158,Dubrovnik-Elritze
+159,Elritze
+160,Lau
+161,Iberischer Näsling
+162,Blaubandbärbling
+163,Bitterling
+164,Sumpfelritze
+165,Weißflossen-Gründling
+166,Belings Gründling
+167,Po-Gründling
+168,Kaukasischer Gründling
+169,Kesslers Gründling
+170,Steingreßling
+171,Donau-Weißflossengründling
+172,Schwarzmeerplötze
+173,Perlfisch
+174,Frauennerfling
+175,Rotauge oder Plötze
+176,Südeuropäische Plötze
+177,Rotfeder
+178,Griechische Rotfeder
+179,Kaukasischer Döbel
+180,Döbel
+181,Ghizani
+182,Strömer
+183,Ukliva-Strömer
+184,Schleie
+185,Calandio-Plötze
+186,Seerüßling
+187,Schiedling
+188,Zährte
+189,Alaska-Saugdöbel
+190,Kleinmäuliger Büffelfisch
+191,Großmäuliger Büffelfisch
+192,Schwarzer Büffelfisch
+193,Bachschmerle
+194,Angora-Schmerle
+195,Terek-Schmerle
+196,Balkan-Steinbeißer
+197,Ohrid-Steinbeißer
+198,Steinbeißer
+199,Europäischer Schlammpeitzger
+200,Gold-Steinbeißer
+201,Balkan-Goldsteinbeißer
+202,Baltischer Goldsteinbeißer
+203,Kaspischer Steinbeißer
+204,Italienischer Steinbeißer
+205,Rumänischer Steinbeißer
+206,Schwarzer Zwergwels
+207,Brauner Katzenwels
+208,Getüpfelter Gabelwels
+209,Wels
+210,Pangasius
+211,Aristoteles-Wels
+212,Gelber Drachenwels
+213,Quappe
+214,Nackthalsgrundel
+215,Gebänderte Kaulquappen-Grundel
+216,Rauhe Kaulquappen-Grundel
+217,Kaspische Kaulquappengrundel
+218,Stern-Kaulquappengrundel
+219,Kaspi-Grundel
+220,Berggrundel
+221,Kaukasus-Grundel
+222,Langschwanzgrundel
+223,Lagunengrundel
+224,Griechische Grundel
+225,Krötengrundel
+226,Flussgrundel
+227,Schwarzmund-Grundel
+228,Gardasee-Grundel
+229,Italienische Grundel
+230,Canestrini-Grundel
+231,Strandgrundel
+232,Kessler-Grundel
+233,Syrman-Grundel
+234,Marmorierte Grundel
+235,Amur-Schläfergrundel
+236,Kleine Schlangennadel
+237,Schwarzmeer-Seenadel
+238,Große Seenadel
+239,Grasnadel
+240,Zebrakärpfling
+241,Spanienkärpfling
+242,Valenciakärpfling
+243,Valencia robertae
+244,Koboldkärpfling
+245,Östlicher Moskitofisch
+246,Guppy
+247,Blaubandkärpfling
+248,Japanischer Reiskärpfling
+249,Kleiner Ährenfisch
+250,Großer Ährenfisch
+251,Streifenfisch
+252,Odontesthes bonariensis
+253,Dicklippige Meeräsche
+254,Gold-Meeräsche
+255,Dünnlippige Meeräsche
+256,Springmeeräsche
+257,Großköpfige Meeräsche
+258,Graue Meeräsche
+259,Chanchito
+260,Süßwasser-Schleimfisch
+261,Flunder
+262,Arktische Flunder
+263,Europäischer Wolfsbarsch
+264,Gefleckter Seebarsch
+265,Don-Kaulbarsch
+266,Ammersee-Kaulbarsch
+267,Donaukaulbarsch
+268,Kaulbarsch
+269,Schrätzer
+270,Flussbarsch
+271,Perkarina
+272,Groppenbarsch
+273,Zander
+274,Seezander
+275,Wolgazander
+276,Rhone-Streber
+277,Streber
+278,Zingel
+279,Steinbarsch
+280,Großohriger Sonnenbarsch
+281,Grüner Sonnenbarsch
+282,Gemeiner Sonnenbarsch
+283,Schwarzbarsch
+284,Forellenbarsch
+285,Groppe
+286,Scheldegroppe
+287,Petit-Groppe
+288,Sibirische Groppe
+289,Rheingroppe
+290,Vierhörniger Seeskorpion
+291,Dreistachliger Stichling
+292,Griechischer Neunstachliger Stichling
+293,Ukrainischer Stichling
+294,Neunstachliger Stichling

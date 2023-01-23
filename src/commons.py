@@ -2,6 +2,17 @@ import os
 import pickle
 import editdistance
 from unidecode import unidecode
+def check_answer():
+    yes = {'yes','y', 'ye', ''}
+    no = {'no','n'}
+
+    choice = input().lower()
+    if choice in yes:
+       return True
+    elif choice in no:
+       return False
+    else:
+       sys.stdout.write("Please run again and respond with  either 'yes' or 'no'")
 
 def fish_in_list(name, l):
     l = [s.lower() for s in l]

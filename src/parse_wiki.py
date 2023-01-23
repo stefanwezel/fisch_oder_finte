@@ -5,7 +5,7 @@ import pandas as pd
 import os
 import argparse
 import sys
-from commons import list_to_pickle, pickle_to_list
+from commons import list_to_pickle, pickle_to_list, check_answer
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-e', '--export', action='store_true')  # on/off flag
@@ -49,17 +49,6 @@ for s in species[:-9]: # ignore lis on bottom
 
 
 
-def check_answer():
-    yes = {'yes','y', 'ye', ''}
-    no = {'no','n'}
-
-    choice = input().lower()
-    if choice in yes:
-       return True
-    elif choice in no:
-       return False
-    else:
-       sys.stdout.write("Please run again and respond with  either 'yes' or 'no'")
 
 if EXPORT:
     if os.path.exists(FILENAME):

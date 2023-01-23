@@ -1,6 +1,6 @@
 import os
 import argparse
-from commons import list_to_pickle, pickle_to_list, fish_in_list
+from commons import list_to_pickle, pickle_to_list, fish_in_list, check_answer
 
 
 
@@ -9,6 +9,7 @@ def add_new_fish(name, made_up, real_fish_path="../data/real_fish.pickle",made_u
     made_up_fish = pickle_to_list(made_up_fish_path)
 
     saved_fish = fish_in_list(name, real_fish)
+    saved_fish += fish_in_list(name, made_up_fish)
     already_saved = True if len(saved_fish) > 0 else False
     print(already_saved)
     print(made_up)
@@ -21,8 +22,13 @@ def add_new_fish(name, made_up, real_fish_path="../data/real_fish.pickle",made_u
 
     elif (not already_saved) and made_up:
         made_up_fish.append(name.capitalize())
-        print(f"Saving you suggested fish {name} to {made_up_fish_path}")
-        list_to_pickle(made_up_fish, made_up_fish_path)
+        print(f"Are you sure, you want to add {name} to {made_up_fish_path}? If so type 'yes'.")
+        add = check_answer()
+        if add:
+            print(f"Saving you suggested fish {name} to {made_up_fish_path}")
+            list_to_pickle(made_up_fish, made_up_fish_path)
+        else:
+            print("Exiting")
         return None
 
     elif (not already_saved) and (not made_up):
@@ -47,4 +53,4 @@ add_new_fish(args.name, made_up)
 
 
 # all_made_up_fish = pickle_to_list("../data/made_up_fish.pickle")
-print(all_made_up_fish)
+# print(all_made_up_fish)

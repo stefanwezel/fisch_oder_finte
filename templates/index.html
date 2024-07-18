@@ -1,33 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
-    <script>
-        function submitOption() {
-            var selectedOption = document.querySelector('input[name="choice"]:checked').value;
-            var baseUrl = document.getElementById('baseUrl').textContent;
-            var currentScore = document.getElementById('currentScore').value;
-            console.log(currentScore);
-            var url = baseUrl + "?selected_option=" + encodeURIComponent(selectedOption) + "&current_score=" + encodeURIComponent(currentScore);
-            window.location.href = url;
+    <title>Quiz</title>
+    <div id="score-display">Current Score: {{ score }}</div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Updated font family */
+            font-size: 24px;
+            /* Adjust the size as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-    </script>
+
+        .options-container {
+            text-align: center;
+        }
+
+        .option {
+            margin: 10px;
+            /* Additional styling for options */
+        }
+
+        input[type=submit] {
+            font-family: Arial, sans-serif;
+            /* Ensures consistency in font */
+            font-size: 20px;
+            /* Larger font size for better visibility */
+            padding: 10px 20px;
+            /* Adds some padding for a larger appearance */
+            background-color: #4CAF50;
+            /* A nice, visually appealing green */
+            color: white;
+            /* White text color for contrast */
+            border: none;
+            border-radius: 5px;
+            /* Adds rounded corners */
+            cursor: pointer;
+            /* Changes the cursor on hover for better UX */
+            transition: background-color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+            /* Darker shade of green on hover */
+        }
+
+        input[type=radio]+label {
+            cursor: pointer;
+            /* Indicates clickable items */
+            padding: 5px;
+            /* Padding for better spacing */
+            margin-bottom: 5px;
+            /* Increased bottom margin for more space between options */
+            display: inline-block;
+            /* Keeps labels inline but allows margin adjustments */
+            border-radius: 5px;
+            /* Optional: Adds rounded corners to the labels */
+        }
+
+        input[type=radio]+label:hover {
+            background-color: #8fa7e7;
+            /* Greyish background on hover */
+            transition: background-color 0.2s;
+            /* Smooth transition for hover effect */
+        }
+
+        /* Style for the score */
+
+        #score-display {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #eb2bd1;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        /* New style for positioning the End Game button */
+        .end-game-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+
+            /* Adjusts the distance from the bottom and right edges */
+        }
+
+        .end-game-container button {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #3639f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .end-game-container button:hover {
+            background-color: #030d63;
+            /* Slightly darker shade on hover */
+        }
+
+        .form-and-messages {
+            display: flex;
+            flex-direction: column;
+            /* Stacks children vertically */
+        }
+
+        #flashed-messages-container {
+            margin-top: 20px;
+            /* Adds some space between the form and the messages */
+            /* Optional: Adds a background color to the messages for visibility */
+            padding: 10px;
+            /* Adds some padding around the messages */
+            border-radius: 5px;
+            /* Optional: Rounds the corners of the message container */
+        }
+
+        #flashed-messages-container {
+            min-height: 50px;
+            /* Reserve space for at least a single line message */
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            /* Ensuring background color is visible for demonstration */
+            list-style-type: none;
+            /* Removes bullet points */
+            display: flex;
+            align-items: center;
+            /* Centers the message vertically */
+            justify-content: center;
+            /* Centers the message horizontally */
+            visibility: hidden;
+            /* Initially hide the container */
+        }
+
+        .flashed-messages {
+            list-style-type: none;
+            /* Removes bullet points from the list */
+            visibility: visible;
+            /* Make messages visible when they exist */
+            margin: 0;
+            /* Adjust margin to 0 for the .flashed-messages to align properly within the container */
+            padding: 0;
+            /* Adjust padding to ensure it does not affect the container size */
+            color: #333;
+            /* Sets the text color for messages */
+        }
+    </style>
 </head>
+
 <body>
-    <div id="baseUrl" style="display: none;">{{ url_for('play_round') }}</div>
-    <h1>Welcome!</h1>
-    <input type="hidden" id="currentScore" value="{{ score }}">
-    <p>Current Score: {{ score }}</p>
-    <p>Please select one of the options:</p>
-    <form id="optionsForm">
-        {% for option in options %}
-        <label>
-            <input type="radio" name="choice" value="{{ option }}">{{ option }}
-        </label><br>
-        {% endfor %}
-    </form>
-    <button onclick="submitOption()">Submit</button>
+    <div class="form-and-messages">
+
+        <form action="/submit" method="post">
+            {% for option in options %}
+            <input type="radio" id="{{ option }}" name="option" value="{{ option }}">
+            <label for="{{ option }}">{{ option }}</label><br>
+            {% endfor %}
+            <input type="submit" value="Submit">
+        </form>
+        <div id="flashed-messages-container">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="flashed-messages">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+    <div class="end-game-container">
+        <button id="endGameButton" type="button">End Game</button>
+    </div>
+    <script>
+        document.getElementById('endGameButton').addEventListener('click', function () {
+            window.location.href = '/end_game';
+        });
+    </script>
 </body>
+
 </html>

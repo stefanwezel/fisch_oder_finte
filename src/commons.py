@@ -2,17 +2,20 @@ import os
 import pickle
 import editdistance
 from unidecode import unidecode
+
+
 def check_answer():
-    yes = {'yes','y', 'ye', ''}
-    no = {'no','n'}
+    yes = {"yes", "y", "ye", ""}
+    no = {"no", "n"}
 
     choice = input().lower()
     if choice in yes:
-       return True
+        return True
     elif choice in no:
-       return False
+        return False
     else:
-       sys.stdout.write("Please run again and respond with  either 'yes' or 'no'")
+        sys.stdout.write("Please run again and respond with  either 'yes' or 'no'")
+
 
 def fish_in_list(name, l):
     l = [s.lower() for s in l]
@@ -28,12 +31,12 @@ def fish_in_list(name, l):
 
 
 def list_to_pickle(l, filepath):
-    with open(filepath, 'wb') as fp:
+    with open(filepath, "wb") as fp:
         pickle.dump(l, fp)
+
 
 def pickle_to_list(filepath):
     assert os.path.exists(filepath)
-    with open (filepath, 'rb') as fp:
+    with open(filepath, "rb") as fp:
         l = pickle.load(fp)
     return l
-

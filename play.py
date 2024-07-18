@@ -40,14 +40,17 @@ def index():
 @app.route("/submit", methods=["POST"])
 def submit():
     session["rounds_counter"] += 1
-    selected_option = request.form["option"]
+    selected_option = request.form.get("option")
+
+    if not selected_option:
+        flash("Please select an option.")
+        return redirect("/")
 
     if selected_option == session.get("correct_option"):
         session["score"] += 1
-
         flash(f"Correct! {random.choice(['🐟', '🐠', '🐡', '🦈'])}")
     else:
-        flash(f"Incorrect! {random.choice(['🎣'])}")
+        flash(f"Incorrect! {random.choice(['🎣', '🍣', '🍤'])}")
 
     print(f"Selected option: {selected_option}, Score: {session['score']}")
 

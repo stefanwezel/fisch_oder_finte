@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <script>
+        function submitOption() {
+            var selectedOption = document.querySelector('input[name="choice"]:checked').value;
+            var baseUrl = document.getElementById('baseUrl').textContent;
+            var currentScore = document.getElementById('currentScore').value;
+            console.log(currentScore);
+            var url = baseUrl + "?selected_option=" + encodeURIComponent(selectedOption) + "&current_score=" + encodeURIComponent(currentScore);
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <div id="baseUrl" style="display: none;">{{ url_for('play_round') }}</div>
+    <h1>Welcome!</h1>
+    <input type="hidden" id="currentScore" value="{{ score }}">
+    <p>Current Score: {{ score }}</p>
+    <p>Please select one of the options:</p>
+    <form id="optionsForm">
+        {% for option in options %}
+        <label>
+            <input type="radio" name="choice" value="{{ option }}">{{ option }}
+        </label><br>
+        {% endfor %}
+    </form>
+    <button onclick="submitOption()">Submit</button>
+</body>
+</html>

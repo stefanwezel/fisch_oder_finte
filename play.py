@@ -59,7 +59,10 @@ def submit():
 
 @app.route("/end_game", methods=["GET", "POST"])
 def end_game():
-    percentage_correct = (session["score"] / session["rounds_counter"]) * 100
+    try:
+        percentage_correct = (session["score"] / session["rounds_counter"]) * 100
+    except ZeroDivisionError:
+        percentage_correct = 0
     text_to_display = f"Game Over! You scored {session['score']} out of {session['rounds_counter']} ({percentage_correct:.2f}%)"
 
     return render_template("game_over.html", text=text_to_display)

@@ -16,6 +16,11 @@ app.secret_key = "your_secret_key"
 
 @app.route("/")
 def index():
+    return render_template("index.html")
+
+
+@app.route("/game")
+def game():
     if "score" not in session:
         session["score"] = 0
     if "rounds_counter" not in session:
@@ -34,7 +39,7 @@ def index():
     correct_option = options[correct_index]
     session["correct_option"] = correct_option
 
-    return render_template("index.html", options=options, score=session["score"])
+    return render_template("game.html", options=options, score=session["score"])
 
 
 @app.route("/submit", methods=["POST"])
@@ -44,7 +49,7 @@ def submit():
 
     if not selected_option:
         flash("Please select an option.")
-        return redirect("/")
+        return redirect("/game")
 
     if selected_option == session.get("correct_option"):
         session["score"] += 1
@@ -54,7 +59,7 @@ def submit():
 
     print(f"Selected option: {selected_option}, Score: {session['score']}")
 
-    return redirect("/")
+    return redirect("/game")
 
 
 @app.route("/end_game", methods=["GET", "POST"])
@@ -73,7 +78,7 @@ def reset():
     session["score"] = 0
     session["rounds_counter"] = 0
 
-    return redirect("/")
+    return redirect("/game")
 
 
 if __name__ == "__main__":

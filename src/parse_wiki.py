@@ -8,8 +8,8 @@ import sys
 from commons import list_to_pickle, pickle_to_list, check_answer
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-e', '--export', action='store_true')  # on/off flag
-parser.add_argument('--filename', default="../data/real_fish.pickle")
+parser.add_argument("-e", "--export", action="store_true")  # on/off flag
+parser.add_argument("--filename", default="../data/real_fish.pickle")
 
 
 args = parser.parse_args()
@@ -29,6 +29,7 @@ results = soup.find(id="bodyContent")
 
 is_latin_name = lambda s: True if "(" not in s else False
 
+
 def remove_numbers(s):
     out = ""
     for c in s:
@@ -36,9 +37,10 @@ def remove_numbers(s):
             out += c
     return out
 
+
 species_with_german_name = []
 species = results.find_all("li")
-for s in species[:-9]: # ignore lis on bottom
+for s in species[:-9]:  # ignore lis on bottom
     if not is_latin_name(s.text):
         species_with_german_name.append(remove_numbers(s.text.split(" (")[0]).lstrip())
 
@@ -46,13 +48,11 @@ for s in species[:-9]: # ignore lis on bottom
 # df = pd.DataFrame (species_with_german_name, columns = ['name'])
 
 
-
-
-
-
 if EXPORT:
     if os.path.exists(FILENAME):
-        sys.stdout.write(f"File {FILENAME} already exists...\nPlease type yes if you want to overwrite the existing file {FILENAME}. Type 'no' if you want to keep the existing file.\n")
+        sys.stdout.write(
+            f"File {FILENAME} already exists...\nPlease type yes if you want to overwrite the existing file {FILENAME}. Type 'no' if you want to keep the existing file.\n"
+        )
         overwrite = check_answer()
         if overwrite:
             sys.stdout.write(f"\nOverwriting existing file {FILENAME}...\n")

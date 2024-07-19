@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fisch oder Finte</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            font-size: 24px;
+            position: fixed;
+            top: 33%;
+            left: 33%;
+            height: 100vh;
+            margin: 0;
+            width: 33%;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            /* Centers content horizontally */
+            width: 100%;
+            /* Ensures main takes full width */
+        }
+
+        button {
+            font-family: Helvetica, sans-serif;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            cursor: pointer;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f1f1f1;
+            font-size: small;
+            font-family: Helvetica, sans-serif;
+            left: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fisch oder Finte?</h1>
+        <p>Eine der ältesten Fragen der Menschheitsgeschichte! Handelt es sich um eine Fischart die es tatsächlich gibt
+            oder um eine Erfundene! Drücke auf "Start Game" und teste dein Fischwissen! </p>
+    </header>
+
+    <main>
+        <button id="start-game-btn" onclick="window.location.href='/game'">Start Game</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fisch oder Finte. All rights reserved.</p>
+    </footer>
+</body>
+</body>
+
+</html>

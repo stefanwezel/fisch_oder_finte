@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Over</title>
+</head>
+<style>
+    body {
+        font-family: Helvetica, sans-serif;
+        font-size: 24px;
+        position: fixed;
+        top: 33%;
+        left: 33%;
+        height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    button {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h1>Game Over!</h1>
+    <p>{{ text }}</p>
+    <form action="/reset" method="get">
+        <button type="submit">Restart Game</button>
+    </form>
+</body>
+
+</html>

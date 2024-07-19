@@ -128,12 +128,6 @@
         }
 
         #flashed-messages-container {
-            margin-top: 20px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        #flashed-messages-container {
             min-height: 50px;
             margin-top: 20px;
             padding: 10px;
@@ -155,10 +149,39 @@
             padding: 0;
             color: #333;
         }
+        #question-container {
+            min-height: 50px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            list-style-type: none;
+            position: fixed;
+            top: 16%;
+            left: 33%;
+            visibility: hidden;
+            opacity: 0;
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+
+        .question {
+            list-style-type: none;
+            visibility: visible;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
     </style>
 </head>
 
 <body>
+    <div id="question-container">
+            <ul class="question">
+                <li>
+                    Finde die Finte:
+                </li>
+            </ul>
+        </div>
     <div class="form-and-messages">
 
         <form action="/submit" method="post">

@@ -78,7 +78,7 @@ def reset():
     session["score"] = 0
     session["rounds_counter"] = 0
 
-    return redirect("/game")
+    return redirect("/")
 
 
 if __name__ == "__main__":

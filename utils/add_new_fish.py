@@ -43,6 +43,7 @@ def add_new_fish(
         )
         sys.exit(1)
     else:
+        print(f"Adding new fish {name}")
         new_row = pd.DataFrame({"name": [name], "real": [real],})
         fish_df = pd.concat([fish_df, new_row,], ignore_index=True)
         fish_df.to_csv(os.path.join("..", os.getenv("FISH_CSV")))

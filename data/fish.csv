@@ -1,0 +1,334 @@
+,name,real
+0,Neunaugen,True
+1,Störartige,True
+2,Aalartige,True
+3,Heringsartige,True
+4,Lachsartige,True
+5,Stintartige,True
+6,Hechtartige,True
+7,Karpfenfische,True
+8,Saugkarpfen,True
+9,Bachschmerlen,True
+10,Steinbeißer,True
+11,Welsartige,True
+12,Dorschartige,True
+13,Grundelartige,True
+14,Seenadelartige,True
+15,Zahnkärpflinge,True
+16,Reisfische,True
+17,Ährenfischartige,True
+18,Meeräschenartige,True
+19,Buntbarsche,True
+20,Schleimfische,True
+21,Plattfische,True
+22,Wolfsbarsche,True
+23,Echte Barsche,True
+24,Sonnenbarsche,True
+25,Groppenverwandte,True
+26,Stichlinge,True
+27,Kaspineunauge,True
+28,Donauneunauge,True
+29,Griechisches Bachneunauge,True
+30,Ukrainisches Bachneunauge,True
+31,Drin-Bachneunauge,True
+32,Donaubachneunauge,True
+33,Flussneunauge,True
+34,Bachneunauge,True
+35,Arktisches Neunauge,True
+36,Oberitalienisches Neunauge,True
+37,Meerneunauge,True
+38,Sibirischer Stör,True
+39,Russischer Stör oder Waxdick,True
+40,Adriatischer Stör,True
+41,Glatt-Stör oder Glattdick,True
+42,Atlantischer Stör,True
+43,Persischer Stör,True
+44,Sterlet,True
+45,Sternhausen,True
+46,Europäischer Stör,True
+47,Europäischer Hausen,True
+48,Löffelstör,True
+49,Europäischer Aal,True
+50,Maifisch,True
+51,Kaspi-Maifisch,True
+52,Kizilagach-Maifisch,True
+53,Finte,True
+54,Schwarzmeer-Maifisch,True
+55,Kaspischer Schwarzrücken,True
+56,Kerchen-Maifisch,True
+57,Suworow-Maifisch,True
+58,Wolga-Maifisch,True
+59,Abrau-Sardine,True
+60,Tyulka-Sardine,True
+61,Kleine Maräne,True
+62,Atlantische Wandermaräne,True
+63,Ammersee-Kilch,True
+64,Pfärrig,True
+65,Riedling,True
+66,Albock,True
+67,Stechlin-Maräne,True
+68,Lavaret,True
+69,Gangfisch,True
+70,Ostseeschnäpel,True
+71,Große Bodenrenke,True
+72,Schnäpel,True
+73,Peledmaräne,True
+74,Kleine Bodenrenke,True
+75,Bodenseefelchen,True
+76,Albeli,True
+77,Weißlachs,True
+78,Donau-Huchen,True
+79,Buckellachs,True
+80,Ketalachs,True
+81,Silberlachs,True
+82,Regenbogenforelle,True
+83,Marmorataforelle,True
+84,Atlantischer Lachs,True
+85,Forelle,True
+86,Adria-Forelle,True
+87,Seesaibling,True
+88,Bachsaibling,True
+89,Amerikanischer Seesaibling,True
+90,Europäische Äsche,True
+91,Europäischer Stint,True
+92,Europäischer Hecht,True
+93,Italienischer Hecht,True
+94,Ungarischer Hundsfisch,True
+95,Amerikanischer Hundsfisch,True
+96,Europäischer Hundsfisch,True
+97,Brachse,True
+98,Zobel,True
+99,Portugiesische Plötze,True
+100,Schneider,True
+101,Ohrid-Schneider,True
+102,Prespa-Schneider,True
+103,Weißer Ukelei,True
+104,Ukelei,True
+105,Kaukasischer Ukelei,True
+106,Spanische Elritze,True
+107,Barbengründling,True
+108,Zope,True
+109,Albanische Barbe,True
+110,Barbe,True
+111,Türkische Barbe,True
+112,Forellenbarbe,True
+113,Tiberbarbe,True
+114,Krimbarbe,True
+115,Italienische Barbe,True
+116,Güster,True
+117,Giebel,True
+118,Goldfisch,True
+119,Karausche,True
+120,Kaukasischer Näsling,True
+121,Dalmatischer Näsling,True
+122,Pardilla-Plötze,True
+123,Nase,True
+124,Terek-Näsling,True
+125,Elritzennäsling,True
+126,Italienischer Näsling,True
+127,Graskarpfen,True
+128,Karpfen,True
+129,Weißflossen-Gründling,True
+130,Gründling,True
+131,Soldators Gründling,True
+132,Silberkarpfen,True
+133,Marmorkarpfen,True
+134,Pardilla-Plötze,True
+135,Moderlieschen,True
+136,Rapfen,True
+137,Danilewski-Hasel,True
+138,Aland,True
+139,Jugoslawischer Döbel,True
+140,Hasel,True
+141,Makal-Strömer,True
+142,Kroatischer Strömer,True
+143,Adriatischer Hasel,True
+144,Tursky-Strömer,True
+145,Aral-Barbe,True
+146,Bulatamai-Barbe,True
+147,Iberische Barbe,True
+148,Griechische Barbe,True
+149,Ebro-Barbe,True
+150,Andalusische Barbe,True
+151,Makedonische Plötze,True
+152,Albanische Plötze,True
+153,Südwesteuropäischer Näsling,True
+154,Griechische Elritze,True
+155,Ziege,True
+156,Bobyrez-Döbel,True
+157,Dalmatische Elritze,True
+158,Dubrovnik-Elritze,True
+159,Elritze,True
+160,Lau,True
+161,Iberischer Näsling,True
+162,Blaubandbärbling,True
+163,Bitterling,True
+164,Sumpfelritze,True
+165,Weißflossen-Gründling,True
+166,Belings Gründling,True
+167,Po-Gründling,True
+168,Kaukasischer Gründling,True
+169,Kesslers Gründling,True
+170,Steingreßling,True
+171,Donau-Weißflossengründling,True
+172,Schwarzmeerplötze,True
+173,Perlfisch,True
+174,Frauennerfling,True
+175,Rotauge oder Plötze,True
+176,Südeuropäische Plötze,True
+177,Rotfeder,True
+178,Griechische Rotfeder,True
+179,Kaukasischer Döbel,True
+180,Döbel,True
+181,Ghizani,True
+182,Strömer,True
+183,Ukliva-Strömer,True
+184,Schleie,True
+185,Calandio-Plötze,True
+186,Seerüßling,True
+187,Schiedling,True
+188,Zährte,True
+189,Alaska-Saugdöbel,True
+190,Kleinmäuliger Büffelfisch,True
+191,Großmäuliger Büffelfisch,True
+192,Schwarzer Büffelfisch,True
+193,Bachschmerle,True
+194,Angora-Schmerle,True
+195,Terek-Schmerle,True
+196,Balkan-Steinbeißer,True
+197,Ohrid-Steinbeißer,True
+198,Steinbeißer,True
+199,Europäischer Schlammpeitzger,True
+200,Gold-Steinbeißer,True
+201,Balkan-Goldsteinbeißer,True
+202,Baltischer Goldsteinbeißer,True
+203,Kaspischer Steinbeißer,True
+204,Italienischer Steinbeißer,True
+205,Rumänischer Steinbeißer,True
+206,Schwarzer Zwergwels,True
+207,Brauner Katzenwels,True
+208,Getüpfelter Gabelwels,True
+209,Wels,True
+210,Pangasius,True
+211,Aristoteles-Wels,True
+212,Gelber Drachenwels,True
+213,Quappe,True
+214,Nackthalsgrundel,True
+215,Gebänderte Kaulquappen-Grundel,True
+216,Rauhe Kaulquappen-Grundel,True
+217,Kaspische Kaulquappengrundel,True
+218,Stern-Kaulquappengrundel,True
+219,Kaspi-Grundel,True
+220,Berggrundel,True
+221,Kaukasus-Grundel,True
+222,Langschwanzgrundel,True
+223,Lagunengrundel,True
+224,Griechische Grundel,True
+225,Krötengrundel,True
+226,Flussgrundel,True
+227,Schwarzmund-Grundel,True
+228,Gardasee-Grundel,True
+229,Italienische Grundel,True
+230,Canestrini-Grundel,True
+231,Strandgrundel,True
+232,Kessler-Grundel,True
+233,Syrman-Grundel,True
+234,Marmorierte Grundel,True
+235,Amur-Schläfergrundel,True
+236,Kleine Schlangennadel,True
+237,Schwarzmeer-Seenadel,True
+238,Große Seenadel,True
+239,Grasnadel,True
+240,Zebrakärpfling,True
+241,Spanienkärpfling,True
+242,Valenciakärpfling,True
+243,Valencia robertae,True
+244,Koboldkärpfling,True
+245,Östlicher Moskitofisch,True
+246,Guppy,True
+247,Blaubandkärpfling,True
+248,Japanischer Reiskärpfling,True
+249,Kleiner Ährenfisch,True
+250,Großer Ährenfisch,True
+251,Streifenfisch,True
+252,Odontesthes bonariensis,True
+253,Dicklippige Meeräsche,True
+254,Gold-Meeräsche,True
+255,Dünnlippige Meeräsche,True
+256,Springmeeräsche,True
+257,Großköpfige Meeräsche,True
+258,Graue Meeräsche,True
+259,Chanchito,True
+260,Süßwasser-Schleimfisch,True
+261,Flunder,True
+262,Arktische Flunder,True
+263,Europäischer Wolfsbarsch,True
+264,Gefleckter Seebarsch,True
+265,Don-Kaulbarsch,True
+266,Ammersee-Kaulbarsch,True
+267,Donaukaulbarsch,True
+268,Kaulbarsch,True
+269,Schrätzer,True
+270,Flussbarsch,True
+271,Perkarina,True
+272,Groppenbarsch,True
+273,Zander,True
+274,Seezander,True
+275,Wolgazander,True
+276,Rhone-Streber,True
+277,Streber,True
+278,Zingel,True
+279,Steinbarsch,True
+280,Großohriger Sonnenbarsch,True
+281,Grüner Sonnenbarsch,True
+282,Gemeiner Sonnenbarsch,True
+283,Schwarzbarsch,True
+284,Forellenbarsch,True
+285,Groppe,True
+286,Scheldegroppe,True
+287,Petit-Groppe,True
+288,Sibirische Groppe,True
+289,Rheingroppe,True
+290,Vierhörniger Seeskorpion,True
+291,Dreistachliger Stichling,True
+292,Griechischer Neunstachliger Stichling,True
+293,Ukrainischer Stichling,True
+294,Neunstachliger Stichling,True
+295,Gorpedon,False
+296,Thunbul,False
+297,Seemoewenfisch,False
+298,Satyr,False
+299,Barball,False
+300,Zote,False
+301,Grasfisch,False
+302,Schwimmkrebs,False
+303,Marmorperl,False
+304,Laichbarsch,False
+305,Koniksalmler,False
+306,Schläucherling,False
+307,Flußschläfer,False
+308,Lappenzander,False
+309,Gemeiner Luftschnapper,False
+310,Plautze,False
+311,Schaluppe,False
+312,Flätze,False
+313,Schleimling,False
+314,Schlaraffe,False
+315,Augenrötling,False
+316,Zipfensalmler,False
+317,Eibe,False
+318,Tischler,False
+319,Walze,False
+320,Gründelbarbe,False
+321,Silberalmler,False
+322,Goldflecken-seeauge,False
+323,Dreiaugen-lackflosse,False
+324,Quappenstromer,False
+325,Birkenpeter,False
+326,Zapfensalmling,False
+327,Fährmann,False
+328,Flunderkönig,False
+329,Galerte,False
+330,Spanische-goldflunder,False
+331,Zampezi Papageifisch,True
+332,Klettergrundel,True

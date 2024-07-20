@@ -4,7 +4,7 @@ import warnings
 import os
 import time
 from getkey import getkey, key
-from src.commons import pickle_to_list
+from cli_game.commons import pickle_to_list
 
 
 def get_answer():

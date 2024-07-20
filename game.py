@@ -38,8 +38,6 @@ def game():
     real_fish = fish_df[fish_df['real']==True]['name'].to_list()
     made_up_fish = fish_df[fish_df['real']==False]['name'].to_list()
 
-    print(made_up_fish)
-
     real_options = random.sample(real_fish, k=3)
     finte = random.sample(made_up_fish, k=1)[0]
 

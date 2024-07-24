@@ -1,20 +1,30 @@
-# Use an official Python runtime as a parent image
-FROM python:3.8-slim
+# Use the official Python image from the Docker Hub
+FROM python:3.10-slim
 
-# Set the working directory in the container
-WORKDIR /fisch_oder_finte
+# Set the working directory
+WORKDIR /app
 
-# Copy the current directory contents into the container at /fisch_oder_finte
-COPY . /fisch_oder_finte
+# Copy the requirements file into the container
+COPY requirements.txt requirements.txt
 
-# Install any needed packages specified in requirements.txt
+# Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 5000 available to the world outside this container
+# Copy the rest of the application code into the container
+COPY . .
+
+# Set the environment variable for Flask
+ENV FLASK_APP=game.py
+
+# Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variable
-ENV NAME World
+# Define build argument for mode
+ARG MODE=production
 
-# Run app.py when the container launches
-CMD ["python", "game.py"]
+# Set the default command to run based on the mode
+CMD if [ "$MODE" = "development" ]; then \
+        flask run --host=0.0.0.0; \
+    else \
+        gunicorn --bind 0.0.0.0:5000 game:app; \
+    fi

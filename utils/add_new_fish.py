@@ -11,8 +11,9 @@ if ENV_FILE:
 
 
 def add_new_fish(
-        name, real,
-    ):
+    name,
+    real,
+):
 
     fish_df = pd.read_csv(os.path.join("..", os.getenv("FISH_CSV")), index_col=0)
 
@@ -44,8 +45,19 @@ def add_new_fish(
         sys.exit(1)
     else:
         print(f"Adding new fish {name}")
-        new_row = pd.DataFrame({"name": [name], "real": [real],})
-        fish_df = pd.concat([fish_df, new_row,], ignore_index=True)
+        new_row = pd.DataFrame(
+            {
+                "name": [name],
+                "real": [real],
+            }
+        )
+        fish_df = pd.concat(
+            [
+                fish_df,
+                new_row,
+            ],
+            ignore_index=True,
+        )
         fish_df.to_csv(os.path.join("..", os.getenv("FISH_CSV")))
 
 

@@ -3,7 +3,7 @@
 
 <head>
     <title>Fisch oder Finte?</title>
-    <div id="score-display">Current Score: {{ score }}</div>
+    <div id="score-display">Aktueller Score: {{ score }}</div>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
         @keyframes fadeIn {
@@ -30,6 +30,7 @@
             left: 33%;
             height: 100vh;
             margin: 0;
+        
         }
 
         .options-container {
@@ -173,10 +174,31 @@
             padding: 0;
             color: #333;
         }
+        .top-right {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        about_button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        about_button:hover {
+            background-color: #0056b3;
+        }
     </style>
+
 </head>
 
 <body>
+    <div class="top-right">
+        <about_button onclick="window.location.href='{{ url_for('about', from_page='game') }}'">❔</button>
+    </div>
     <div id="question-container">
         <ul class="question">
             <li>
@@ -191,7 +213,7 @@
             <input type="radio" id="{{ option }}" name="option" value="{{ option }}">
             <label for="{{ option }}">{{ option }}</label><br>
             {% endfor %}
-            <input type="submit" value="Submit">
+            <input type="submit" value="Wählen">
         </form>
         <div id="flashed-messages-container">
             {% with messages = get_flashed_messages() %}
@@ -206,13 +228,14 @@
         </div>
     </div>
     <div class="end-game-container">
-        <button id="endGameButton" type="button">End Game</button>
+        <button id="endGameButton" type="button">Spiel Beenden</button>
     </div>
     <script>
         document.getElementById('endGameButton').addEventListener('click', function () {
             window.location.href = '/end_game';
         });
     </script>
+    
 </body>
 
 </html>

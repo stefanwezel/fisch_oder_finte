@@ -54,6 +54,23 @@
             left: 0;
 
         }
+        .top-right {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        about_button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        about_button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -63,9 +80,12 @@
         <p>Eine der ältesten Fragen der Menschheitsgeschichte! Handelt es sich um eine Fischart die es tatsächlich gibt
             oder um eine Erfundene! Drücke auf "Start Game" und teste dein Fischwissen! </p>
     </header>
+    <div class="top-right">
+        <about_button onclick="window.location.href='{{ url_for('about', from_page='index') }}'">❔</button>
+    </div>
 
     <main>
-        <button id="start-game-btn" onclick="window.location.href='/game'">Start Game</button>
+        <button id="start-game-btn" onclick="window.location.href='/game'">Let's go</button>
     </main>
 
     <footer>

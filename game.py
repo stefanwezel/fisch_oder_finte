@@ -35,8 +35,8 @@ def game():
         session["rounds_counter"] = 0
 
     fish_df = pd.read_csv(app.config["fish_csv"], index_col=0)
-    real_fish = fish_df[fish_df['real']==True]['name'].to_list()
-    made_up_fish = fish_df[fish_df['real']==False]['name'].to_list()
+    real_fish = fish_df[fish_df["real"] == True]["name"].to_list()
+    made_up_fish = fish_df[fish_df["real"] == False]["name"].to_list()
 
     real_options = random.sample(real_fish, k=3)
     finte = random.sample(made_up_fish, k=1)[0]
@@ -62,9 +62,9 @@ def submit():
 
     if selected_option == session.get("correct_option"):
         session["score"] += 1
-        flash(f"Correct! {random.choice(['🐟', '🐠', '🐡', '🦈'])}")
+        flash(f"Korrekt! {random.choice(['🐟', '🐠', '🐡', '🦈'])}")
     else:
-        flash(f"Incorrect! {random.choice(['🎣', '🍣', '🍤'])}")
+        flash(f"Leider falsch! {random.choice(['🎣', '🍣', '🍤'])}")
 
     print(f"Selected option: {selected_option}, Score: {session['score']}")
 
@@ -88,6 +88,12 @@ def reset():
     session["rounds_counter"] = 0
 
     return redirect("/")
+
+
+@app.route("/about")
+def about():
+    from_page = request.args.get("from_page", "game")
+    return render_template("about.html", from_page=from_page)
 
 
 if __name__ == "__main__":

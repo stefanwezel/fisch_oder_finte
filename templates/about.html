@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 8%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .limited-width {
+            max-width: 50%;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f1f1f1;
+            font-size: small;
+            font-family: Helvetica, sans-serif;
+            left: 0;
+
+        }
+        .donate-button {
+            background-color: #fcb900;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .donate-button:hover {
+            background-color: #a57a05;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>hello there</h1>
+    <section class="limited-width">
+        <h2>🗨️ Feedback</h2>
+        <p>Du hast Feedback oder Ideen für "Fisch oder Finte"? Hat sich der Fehlerteufelsrochen eingeschlichen? Schreibe es gerne an <a href="mailto:mail@fischoderfinte.de">mail@fischoderfinte.de</a>! </p>
+    </section>
+
+    <section class="limited-width">
+        <h2>⌨️ Contribute</h2>
+        <p>Du möchtest contributen? Hier ist das GitHub repository: <a href="https://github.com/stefanwezel/fisch_oder_finte">GitHub Repository</a></p>
+    </section>
+
+    <section class="limited-width">
+        <h2>🐡 Über mich</h2>
+        <p>Mein Name ist Stefan und ich habe (abseits von genereller Naturbegeisterung) mit Fischen eigentlich nicht 
+            besonders viel am Hut sondern arbeite eigentlich als Machine Learning Engineer.
+            "Fisch oder Finte" entstand beim Durchblättern eines Kosmos Naturführers und
+            und der darauffolgenden Einsicht, dass wohl keiner der Namen in nüchternem Zustand ersonnen wurde...</p>
+    </section>
+
+    <section class="limited-width">
+        <h2>💰 Donations</h2>
+        <p>Du möchtest das Projekt finanziell unterstützen? 50 % von allem was über die Deckung der Betriebskosten geht werden an 
+            den <a href="https://www.nabu.de/spenden-und-mitmachen/fuer-unternehmen/33669.html"> NABU-Flussfonds</a> gespendet. Falls du andere Vorschläge hast wo die 
+            Spenden hinfließen (ha!) könnten, schreibe gerne an <a href="mailto:mail@fischoderfinte.de">mail@fischoderfinte.de</a>!</p>
+        <button class="donate-button" onclick="window.location.href='https:paypal.me/fischoderfinte'">
+            Donate
+            <img src="https://cdn3.emoji.gg/emojis/1716_PAYPAL.png" width="16px" height="16px" alt="PAYPAL">
+        </button>
+        </button>
+
+    </section>
+    <div class="top-right">
+        <button id="backButton">Zurück</button>
+    </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fromPage = urlParams.get('from_page');
+            const backButton = document.getElementById('backButton');
+            if (fromPage === 'index') {
+                backButton.onclick = function () {
+                    window.location.href = '{{ url_for("index") }}';
+                };
+            } else if (fromPage === 'end_game') {
+                backButton.onclick = function () {
+                    window.location.href = '{{ url_for("end_game") }}';
+                };
+            } else {
+                backButton.onclick = function () {
+                    window.location.href = '{{ url_for("game") }}';
+                };
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Fisch oder Finte. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

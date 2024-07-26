@@ -1,58 +1,52 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Fisch oder Finte</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisch oder Finte?</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
     <style>
-        body {
-            font-family: Helvetica, sans-serif;
-            font-size: 24px;
-            position: fixed;
-            top: 33%;
-            left: 33%;
-            height: 100vh;
+        html, body {
+            height: 100%;
             margin: 0;
-            width: 33%;
+            padding: 0;
         }
-
-        h1 {
-            font-size: 48px;
-        }
-
-        main {
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            /* Centers content horizontally */
-            width: 100%;
-            /* Ensures main takes full width */
+            flex-direction: column;
+            background-color: #ffffff;
         }
+        .content-wrapper {
+            flex: 1;
+            text-align: center;
+        }
+        header {
+            margin-top: 100px;
 
+        }
+        h1 {
+            color: #000000;
+        }
+        p {
+            color: #000000;
+        }
+        .intro-text {
+            margin: 0 20px; /* Added margin for better readability */
+        }
         button {
-            font-family: Helvetica, sans-serif;
-            font-size: 20px;
             padding: 10px 20px;
-            background-color: #4CAF50;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 5px;
+            margin-top: 20px;
         }
-
         button:hover {
-            background-color: #45a049;
-            cursor: pointer;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            background-color: #f1f1f1;
-            font-size: small;
-            font-family: Helvetica, sans-serif;
-            left: 0;
-
+            background-color: #0056b3;
         }
         .top-right {
             position: fixed;
@@ -71,27 +65,102 @@
         about_button:hover {
             background-color: #0056b3;
         }
+        footer {
+            width: 100%;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: small;
+            font-family: Helvetica, sans-serif;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+
+        /* Media Queries for Responsive Font Sizes */
+        @media (min-width: 768px) {
+            body {
+                font-size: 18px; /* Larger font size for tablets and above */
+            }
+            h1 {
+                font-size: 2em; /* Adjust heading size */
+            }
+            p {
+                font-size: 1.1em; /* Adjust paragraph size */
+            }
+            button {
+                font-size: 17px; /* Adjust button text size */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                font-size: 19px; /* Even larger font size for desktops and above */
+            }
+            h1 {
+                font-size: 2.2em; /* Adjust heading size */
+            }
+            p {
+                font-size: 1.2em; /* Adjust paragraph size */
+            }
+            button {
+                font-size: 18px; /* Adjust button text size */
+            }
+        }
+        @media (min-width: 768px) {
+        body {
+            font-size: 18px; /* Larger font size for tablets and above */
+        }
+        h1 {
+            font-size: 2em; /* Adjust heading size */
+        }
+        p {
+            font-size: 1.1em; /* Adjust paragraph size */
+        }
+        button {
+            font-size: 17px; /* Adjust button text size */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        body {
+            font-size: 19px; /* Even larger font size for desktops and above */
+        }
+        h1 {
+            font-size: 2.2em; /* Adjust heading size */
+        }
+        p {
+            font-size: 1.2em; /* Adjust paragraph size */
+        }
+        button {
+            font-size: 18px; /* Adjust button text size */
+        }
+    }
+
+    /* New media query for horizontal layout */
+    @media (orientation: landscape) {
+        .intro-text {
+            max-width: 60%; /* Make the text narrower */
+            margin: 0 auto; /* Center the text */
+        }
+    }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Fisch oder Finte?</h1>
-        <p>Eine der ältesten Fragen der Menschheitsgeschichte! Handelt es sich um eine Fischart die es tatsächlich gibt
-            oder um eine Erfundene! Drücke auf "Start Game" und teste dein Fischwissen! </p>
-    </header>
-    <div class="top-right">
-        <about_button onclick="window.location.href='{{ url_for('about', from_page='index') }}'">❔</button>
+    <div class="content-wrapper">
+        <header>
+            <h1>Fisch oder Finte?</h1>
+            <p class="intro-text">Eine der ältesten Fragen der Menschheitsgeschichte! Handelt es sich um eine Fischart die es tatsächlich gibt
+                oder um eine Erfundene! Drücke auf "Start Game" und teste dein Fischwissen! </p>
+        </header>
+        <div class="top-right">
+            <about_button onclick="window.location.href='{{ url_for('about', from_page='index') }}'">❔</about_button>
+        </div>
+        <main>
+            <button id="start-game-btn" onclick="window.location.href='/game'">Let's go</button>
+        </main>
     </div>
-
-    <main>
-        <button id="start-game-btn" onclick="window.location.href='/game'">Let's go</button>
-    </main>
-
     <footer>
         <p>&copy; 2024 Fisch oder Finte. All rights reserved.</p>
     </footer>
 </body>
-</body>
-
 </html>

@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Game Over</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisch oder Finte?</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-</head>
-<style>
-    body {
-        font-family: Helvetica, sans-serif;
-        font-size: 24px;
-        position: fixed;
-        top: 33%;
-        left: 33%;
-        height: 100vh;
-        margin: 0;
-    }
 
-    h1 {
-        font-size: 48px;
-    }
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+        .content-wrapper {
+            flex: 1;
+            text-align: center;
+        }
+        header {
+            margin-top: 100px;
 
-    button {
-        font-family: Helvetica, sans-serif;
-        font-size: 20px;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-    }
-
-    button:hover {
-        background-color: #45a049;
-        cursor: pointer;
-    }
-    .top-right {
+        }
+        h1 {
+            color: #000000;
+        }
+        p {
+            color: #000000;
+        }
+        .intro-text {
+            margin: 0 20px; /* Added margin for better readability */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .top-right {
             position: fixed;
             top: 10px;
             right: 10px;
@@ -52,17 +65,101 @@
         about_button:hover {
             background-color: #0056b3;
         }
-</style>
+        footer {
+            width: 100%;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: small;
+            font-family: Helvetica, sans-serif;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+
+        /* Media Queries for Responsive Font Sizes */
+        @media (min-width: 768px) {
+            body {
+                font-size: 18px; /* Larger font size for tablets and above */
+            }
+            h1 {
+                font-size: 2em; /* Adjust heading size */
+            }
+            p {
+                font-size: 1.1em; /* Adjust paragraph size */
+            }
+            button {
+                font-size: 17px; /* Adjust button text size */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                font-size: 19px; /* Even larger font size for desktops and above */
+            }
+            h1 {
+                font-size: 2.2em; /* Adjust heading size */
+            }
+            p {
+                font-size: 1.2em; /* Adjust paragraph size */
+            }
+            button {
+                font-size: 18px; /* Adjust button text size */
+            }
+        }
+        @media (min-width: 768px) {
+        body {
+            font-size: 18px; /* Larger font size for tablets and above */
+        }
+        h1 {
+            font-size: 2em; /* Adjust heading size */
+        }
+        p {
+            font-size: 1.1em; /* Adjust paragraph size */
+        }
+        button {
+            font-size: 17px; /* Adjust button text size */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        body {
+            font-size: 19px; /* Even larger font size for desktops and above */
+        }
+        h1 {
+            font-size: 2.2em; /* Adjust heading size */
+        }
+        p {
+            font-size: 1.2em; /* Adjust paragraph size */
+        }
+        button {
+            font-size: 18px; /* Adjust button text size */
+        }
+    }
+
+    /* New media query for horizontal layout */
+    @media (orientation: landscape) {
+        .intro-text {
+            max-width: 60%; /* Make the text narrower */
+            margin: 0 auto; /* Center the text */
+        }
+    }
+    </style>
+</head>
 
 <body>
-    <h1>Game Over!</h1>
-    <div class="top-right">
-        <about_button onclick="window.location.href='{{ url_for('about', from_page='index') }}'">❔</button>
+    <div class="content-wrapper">
+        <header>
+            <h1>Game Over!</h1>
+            <p>{{ text }}</p>
+        </header>
+        <div class="top-right">
+            <about_button onclick="window.location.href='{{ url_for('about', from_page='index') }}'">❔</about_button>
+        </div>
+        <form action="/reset" method="get">
+            <button type="submit">Neue Runde, neues Glück</button>
+        </form>
     </div>
-    <p>{{ text }}</p>
-    <form action="/reset" method="get">
-        <button type="submit">Neue Runde, neues Glück</button>
-    </form>
+    <footer>
+        <p>&copy; 2024 Fisch oder Finte. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>

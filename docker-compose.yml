@@ -1,7 +1,10 @@
 version: '3'
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        MODE: development
     volumes:
       - .:/fisch_oder_finte
     ports:

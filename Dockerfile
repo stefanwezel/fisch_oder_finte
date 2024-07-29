@@ -19,8 +19,12 @@ ENV FLASK_APP=game.py
 # Expose the port the app runs on
 EXPOSE 5000
 
-# Define build argument for mode
-ARG MODE=production
+# Set an environment variable based on the MODE argument
+ARG MODE
+ENV MODE=${MODE}
+
+# Print the MODE value to verify it's set correctly
+RUN echo "MODE is set to ${MODE}"
 
 # Set the default command to run based on the mode
 CMD if [ "$MODE" = "development" ]; then \

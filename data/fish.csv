@@ -1,31 +1,31 @@
 ,name,real
-0,Neunaugen,True
-1,Störartige,True
-2,Aalartige,True
-3,Heringsartige,True
-4,Lachsartige,True
-5,Stintartige,True
-6,Hechtartige,True
-7,Karpfenfische,True
-8,Saugkarpfen,True
-9,Bachschmerlen,True
+0,Neunauge,True
+1,Stör,True
+2,Aal,True
+3,Hering,True
+4,Lachs,True
+5,Stint,True
+6,Hecht,True
+7,Karpfen,True
+8,Saugkarpfe,True
+9,Bachschmerle,True
 10,Steinbeißer,True
-11,Welsartige,True
-12,Dorschartige,True
-13,Grundelartige,True
-14,Seenadelartige,True
-15,Zahnkärpflinge,True
-16,Reisfische,True
-17,Ährenfischartige,True
-18,Meeräschenartige,True
+11,Wels,True
+12,Dorsch,True
+13,Grundel,True
+14,Seenadel,True
+15,Zahnkärpfling,True
+16,Reisfisch,True
+17,Ährenfisch,True
+18,Meeräsche,True
 19,Buntbarsche,True
 20,Schleimfische,True
 21,Plattfische,True
 22,Wolfsbarsche,True
-23,Echte Barsche,True
-24,Sonnenbarsche,True
-25,Groppenverwandte,True
-26,Stichlinge,True
+23,Echte Barsch,True
+24,Sonnenbarsch,True
+25,Groppe,True
+26,Stichling,True
 27,Kaspineunauge,True
 28,Donauneunauge,True
 29,Griechisches Bachneunauge,True
@@ -294,9 +294,9 @@
 292,Griechischer Neunstachliger Stichling,True
 293,Ukrainischer Stichling,True
 294,Neunstachliger Stichling,True
-295,Gorpedon,False
-296,Thunbul,False
-297,Seemoewenfisch,False
+295,Gorpedos Stör,False
+296,Thunbulle,False
+297,Möwenfisch,False
 298,Satyr,False
 299,Barball,False
 300,Zote,False
@@ -334,3 +334,32 @@
 332,Klettergrundel,True
 333,Galosche,False
 334,Krantel,False
+335,Orschel,False
+336, Giebel, True
+337, Bitterlinge, True
+338,Moderlieschen,True
+339,Elritze,True
+340,Blei,True
+341,Gründling,True
+342,Hasel,True
+343,Aland,True
+344,Schmerle,True
+345,Schlammpeitzger,True
+346,Steinbeißer,True
+347,Aalmutter,True
+348,Große Schlangennadel,True
+349,Schnellfisch,True
+350,Seehase,True
+351,Steinpicker,True
+352,Roter Knurrhahn,True
+353,Butterfisch,True
+354,Kliesche,True
+355,Sterling,False
+356,Zunder,False
+357,Hornhecht,True
+358,Alburnus,True
+359,Mairenke,True
+360,Schlehe,False
+361,Pfriemel,False
+362,Leimer,False
+363,Träubling,False

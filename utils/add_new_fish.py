@@ -17,8 +17,8 @@ def add_new_fish(
 
     fish_df = pd.read_csv(os.path.join("..", os.getenv("FISH_CSV")), index_col=0)
 
-    real_fish = fish_df[fish_df["real"] == True]["name"].to_list()
-    made_up_fish = fish_df[fish_df["real"] == False]["name"].to_list()
+    real_fish = fish_df[fish_df["real"] == "True"]["name"].to_list()
+    made_up_fish = fish_df[fish_df["real"] == "False"]["name"].to_list()
 
     real_similar_fish = fish_in_list(name, real_fish)
     madeup_similar_fish = fish_in_list(name, made_up_fish)
@@ -89,6 +89,6 @@ if __name__ == "__main__":
     ), "Please choose either `--real` or `--madeup` as flag. ⚠️"
 
     if real:
-        add_new_fish(args.name, True)
+        add_new_fish(args.name, "True")
     else:
-        add_new_fish(args.name, False)
+        add_new_fish(args.name, "False")

@@ -10,7 +10,7 @@ import random
 import pandas as pd
 from dotenv import find_dotenv, load_dotenv
 import os
-
+import logging
 
 ENV_FILE = find_dotenv(".env")
 if ENV_FILE:
@@ -34,9 +34,11 @@ def game():
     if "rounds_counter" not in session:
         session["rounds_counter"] = 0
 
+
     fish_df = pd.read_csv(app.config["fish_csv"], index_col=0)
-    real_fish = fish_df[fish_df["real"] == True]["name"].to_list()
-    made_up_fish = fish_df[fish_df["real"] == False]["name"].to_list()
+    real_fish = fish_df[fish_df["real"] == "True"]["name"].to_list()
+    made_up_fish = fish_df[fish_df["real"] == "False"]["name"].to_list()
+
 
     real_options = random.sample(real_fish, k=3)
     finte = random.sample(made_up_fish, k=1)[0]

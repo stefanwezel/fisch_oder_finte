@@ -59,7 +59,7 @@ def submit():
     selected_option = request.form.get("option")
 
     if not selected_option:
-        flash("Please select an option.")
+        flash("Bitte wähle eine Option aus.")
         return redirect("/game")
 
     if selected_option == session.get("correct_option"):

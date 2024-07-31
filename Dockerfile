@@ -28,7 +28,7 @@ RUN echo "MODE is set to ${MODE}"
 
 # Set the default command to run based on the mode
 CMD if [ "$MODE" = "development" ]; then \
-        flask run --host=0.0.0.0; \
+        export FLASK_ENV=development && export FLASK_DEBUG=1 && flask run --host=0.0.0.0; \
     else \
         gunicorn --bind 0.0.0.0:5000 game:app; \
     fi

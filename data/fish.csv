@@ -20,8 +20,8 @@
 18,Meeräsche,True
 19,Buntbarsch,True
 20,Schleimfisch,True
-21,Plattfische,True
-22,Wolfsbarsche,True
+21,Plattfisch,True
+22,Wolfsbarsch,True
 23,Echte Barsch,True
 24,Sonnenbarsch,True
 25,Groppe,True
@@ -251,7 +251,7 @@
 249,Kleiner Ährenfisch,True
 250,Großer Ährenfisch,True
 251,Streifenfisch,True
-252,Odontesthes bonariensis,True
+252,Schokoladenhai,True
 253,Dicklippige Meeräsche,True
 254,Gold-Meeräsche,True
 255,Dünnlippige Meeräsche,True
@@ -363,3 +363,25 @@
 361,Pfriemel,False
 362,Leimer,False
 363,Träubling,False
+364,Nagelrochen,True
+365, Renke, True
+366, Äsche, True
+367, Waller, True
+368,Kuckucks-Lippfisch,True
+369,Scholle,True
+370,Streckerspinne,False
+371,Holzbock,False
+372,Posthornsalmler,False
+373,Bohrer,False
+374,Schmetterlingshaft,False
+375,Berberitze,False
+376,Mispel,False
+377,Glänzender Schleimkopf,True
+378,Laternenträger,True
+379,Koboldhai,True
+380,Antennenwels,True
+381,Lungenfisch,True
+382,Gelbflecken-Igelfisch,True
+383,Glasbarsch,True
+384,Schiefmaul,True
+385,Seewolf,True

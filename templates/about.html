@@ -6,67 +6,10 @@
     <meta name="google-adsense-account" content="ca-pub-7963483579984328">
     <title>About</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            justify-content: left;
-            background-color: #ffffff;
-        }
-        .content-wrapper {
-            flex: 1;
-            margin: 8%;
-        }
-        h1 {
-            color: #333;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .limited-width {
-            max-width: 90%;
-        }
-        footer {
-            width: 100%;
-            text-align: center;
-            background-color: #ffffff;
-            font-size: small;
-            font-family: Helvetica, sans-serif;
-            padding: 10px 0;
-        }
-        .donate-button {
-            background-color: #fcb900;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-        .donate-button:hover {
-            background-color: #a57a05;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div class="content-wrapper">
+    <div class="about-content-wrapper">
         <h1>hello there</h1>
         <section class="limited-width">
             <h2>📖 Spielregeln</h2>
@@ -93,7 +36,7 @@
 
         <section class="limited-width">
             <h2>💰 Donations</h2>
-            <p>Du möchtest das Projekt finanziell unterstützen? 50 % von allem was über die Deckung der Betriebskosten geht werden an 
+            <p>Du möchtest das Projekt finanziell unterstützen? Alles was über die Deckung der Betriebskosten geht werden an 
                 den <a href="https://www.nabu.de/spenden-und-mitmachen/fuer-unternehmen/33669.html"> NABU-Flussfonds</a> gespendet. Falls du andere Vorschläge hast wo die 
                 Spenden hinfließen (ha!) könnten, schreibe gerne an <a href="mailto:mail@fischoderfinte.de">mail@fischoderfinte.de</a>!</p>
             <button class="donate-button" onclick="window.location.href='https:paypal.me/fischoderfinte'">
@@ -106,7 +49,8 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Fisch oder Finte. All rights reserved.</p>
+        
+      {% include "footer.html" %}
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {

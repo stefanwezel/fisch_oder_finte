@@ -1,0 +1,227 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+.content-wrapper {
+    flex: 1;
+    text-align: center;
+}
+header {
+    margin-top: 100px;
+
+}
+h1 {
+    color: #000000;
+}
+p {
+    color: #000000;
+}
+.about-content-wrapper {
+    flex: 1;
+    margin: 8%; 
+    font-size: 12px;       }
+.intro-text {
+    margin: 0 20px; /* Added margin for better readability */
+}
+.limited-width {
+    max-width: 90%;
+}
+.donate-button {
+    background-color: #fcb900;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.donate-button:hover {
+    background-color: #a57a05;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+about_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+about_button:hover {
+    background-color: #0056b3;
+}
+/* Media Queries for Responsive Font Sizes */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; /* Larger font size for tablets and above */
+    }
+    h1 {
+        font-size: 2em; /* Adjust heading size */
+    }
+    p {
+        font-size: 1.1em; /* Adjust paragraph size */
+    }
+    button {
+        font-size: 17px; /* Adjust button text size */
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 19px; /* Even larger font size for desktops and above */
+    }
+    h1 {
+        font-size: 2.2em; /* Adjust heading size */
+    }
+    p {
+        font-size: 1.2em; /* Adjust paragraph size */
+    }
+    button {
+        font-size: 18px; /* Adjust button text size */
+    }
+}
+@media (min-width: 768px) {
+body {
+    font-size: 18px; /* Larger font size for tablets and above */
+}
+h1 {
+    font-size: 2em; /* Adjust heading size */
+}
+p {
+    font-size: 1.1em; /* Adjust paragraph size */
+}
+button {
+    font-size: 17px; /* Adjust button text size */
+}
+}
+
+@media (min-width: 1024px) {
+body {
+    font-size: 19px; /* Even larger font size for desktops and above */
+}
+h1 {
+    font-size: 2.2em; /* Adjust heading size */
+}
+p {
+    font-size: 1.2em; /* Adjust paragraph size */
+}
+button {
+    font-size: 18px; /* Adjust button text size */
+}
+}
+
+/* New media query for horizontal layout */
+@media (orientation: landscape) {
+.intro-text {
+    max-width: 60%; /* Make the text narrower */
+    margin: 0 auto; /* Center the text */
+}
+}
+
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: small;
+    font-family: Helvetica, sans-serif;
+    padding: 10px 0;
+    margin-top: auto;
+        background-color: red !important; /* test override */
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer a:visited {
+    color: #1E3B5C;
+}
+footer {
+    padding: 10px 0 !important;
+}
+.link {
+  color: #23456C;
+}
+
+
+.cookie-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            z-index: 1000;
+            /*display: none; /* Hidden by default */*/
+        }
+
+        /* Styling for the central pop-up box */
+        .cookie-popup {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px; /* Adjust width as needed */
+            text-align: center; /* Center text within the box */
+            font-family: sans-serif;
+            position: relative; /* Needed for z-index relative to overlay */
+            z-index: 1001; /* Above the overlay */
+        }
+
+        .cookie-popup h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .cookie-popup p {
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .cookie-popup button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s ease;
+        }
+
+        .cookie-popup button:hover {
+            background-color: #0056b3;
+        }

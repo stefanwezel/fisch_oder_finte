@@ -98,5 +98,15 @@ def about():
     return render_template("about.html", from_page=from_page)
 
 
+@app.route("/impressum")
+def impressum():
+    return render_template("impressum.html")
+
+
+@app.route("/privacy_policy_de")
+def privacy_policy_de():
+    return render_template("privacy_policy_de.html")
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

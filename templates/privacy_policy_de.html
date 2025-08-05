@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Impressum</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">  
+</head>
+<body>
+    <div id="cookieConsentOverlay" class="cookie-overlay">
+        {% include "cookies.html" %}
+    <div>
+    <div class="simple-text-page">
+        <h1>Datenschutzerklärung</h1>
+        <p>Diese Website verarbeitet personenbezogene Daten gemäß der DSGVO. Es werden nur technisch notwendige Cookies gesetzt.</p>
+
+        <p>Kontakt für Datenschutzanfragen:<br>
+        Stefan Wezel<br>
+        datenschutz@example.com</p>
+
+        <p><a href="{{ url_for('index') }}" style="color: #dddddd;">Back to homepage</a></p>
+    </div>
+    <div class="footer">
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>

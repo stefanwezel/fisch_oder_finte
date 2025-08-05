@@ -6,8 +6,9 @@
     <meta name="google-adsense-account" content="ca-pub-7963483579984328">
     <title>Fisch oder Finte?</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-    <style>
+<!--     <style>
         html, body {
             height: 100%;
             margin: 0;
@@ -66,16 +67,6 @@
         about_button:hover {
             background-color: #0056b3;
         }
-        footer {
-            width: 100%;
-            text-align: center;
-            background-color: #ffffff;
-            font-size: small;
-            font-family: Helvetica, sans-serif;
-            padding: 10px 0;
-            margin-top: auto;
-        }
-
         /* Media Queries for Responsive Font Sizes */
         @media (min-width: 768px) {
             body {
@@ -143,10 +134,13 @@
             margin: 0 auto; /* Center the text */
         }
     }
-    </style>
+    </style> -->
 </head>
 
 <body>
+    <div id="cookieConsentOverlay" class="cookie-overlay">
+        {% include "cookies.html" %}
+    <div>
     <div class="content-wrapper">
         <header>
             <h1>Fisch oder Finte?</h1>
@@ -160,8 +154,8 @@
             <button id="start-game-btn" onclick="window.location.href='/game'">Let's go</button>
         </main>
     </div>
-    <footer>
-        <p>&copy; 2025 Fisch oder Finte. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+      {% include "footer.html" %}
+    </div>
 </body>
 </html>

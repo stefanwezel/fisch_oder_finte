@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Impressum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">  
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            background-color: #ffffff;
+        }
+        .content-wrapper {
+            flex: 1;
+            margin: 8%;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .limited-width {
+            max-width: 90%;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: small;
+            font-family: Helvetica, sans-serif;
+            padding: 10px 0;
+        }
+        .donate-button {
+            background-color: #fcb900;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .donate-button:hover {
+            background-color: #a57a05;
+        }
+    </style>
+</head>
+<body>
+    <div id="cookieConsentOverlay" class="cookie-overlay">
+        {% include "cookies.html" %}
+    <div>
+    <div class="simple-text-page">
+
+        <h1>Impressum</h1>
+        <p>Angaben gemäß § 5 TMG:</p>
+        <p>Stefan Wezel<br>
+        Wennfelder Garten 11<br>
+        72072 Tübingen<br>
+        Deutschland</p>
+
+        <p>Kontakt:<br>
+        Telefon: <br>
+        E-Mail: </p>
+
+        <p><a href="{{ url_for('privacy_policy_de') }}" style="color: #dddddd;">Datenschutzerklärung</a></p>
+        <p><a href="{{ url_for('index') }}" style="color: #dddddd;">Back to homepage</a></p>
+    </div>
+    <div class="footer">
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>

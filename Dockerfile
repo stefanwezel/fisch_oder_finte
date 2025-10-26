@@ -19,9 +19,6 @@ ENV FLASK_APP=game.py
 # Expose the port the app runs on
 EXPOSE 5000
 
-# Add a health check (verifies the container is responding)
-HEALTHCHECK --interval=5m --timeout=3s \
-  CMD curl -f http://localhost:5000/ || exit 1
 
 # Set an environment variable based on the MODE argument
 ARG MODE

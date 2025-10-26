@@ -7,17 +7,21 @@ WORKDIR /app
 # Copy the requirements file into the container
 COPY requirements.txt requirements.txt
 
-# Install the dependencies
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code into the container
+# Copy the rest of the application code
 COPY . .
 
-# Set the environment variable for Flask
+# Set environment variable for Flask
 ENV FLASK_APP=game.py
 
 # Expose the port the app runs on
 EXPOSE 5000
+
+# Add a health check (verifies the container is responding)
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD curl -f http://localhost:5000/ || exit 1
 
 # Set an environment variable based on the MODE argument
 ARG MODE
@@ -26,7 +30,7 @@ ENV MODE=${MODE}
 # Print the MODE value to verify it's set correctly
 RUN echo "MODE is set to ${MODE}"
 
-# Set the default command to run based on the mode
+# Default command depending on MODE
 CMD if [ "$MODE" = "development" ]; then \
         export FLASK_ENV=development && export FLASK_DEBUG=1 && flask run --host=0.0.0.0; \
     else \
